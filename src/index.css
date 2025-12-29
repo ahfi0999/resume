@@ -2600,3 +2600,35 @@ html {
   inherits: false;
   initial-value: 1;
 }
+
+:root {
+  --page-max-width: 1200px;
+  --page-padding: clamp(1rem, 4vw, 2.5rem);
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-padding: clamp(0.75rem, 6vw, 1.5rem);
+  }
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100%;
+}
+
+.section-shell {
+  width: min(100%, var(--page-max-width));
+  margin-inline: auto;
+  padding-inline: var(--page-padding);
+}
+
+.section-shell--flush {
+  padding-inline: 0;
+}

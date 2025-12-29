@@ -42,7 +42,7 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="max-w-4xl mx-auto text-center relative z-10 px-4 sm:px-6">
+      <div className="section-shell max-w-4xl text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

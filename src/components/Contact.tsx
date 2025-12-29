@@ -38,8 +38,8 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-12 sm:py-20 px-4 bg-black/20" ref={ref}>
-      <div className="max-w-6xl mx-auto">
+    <section id="contact" className="py-12 sm:py-20 bg-black/20" ref={ref}>
+      <div className="section-shell">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}

@@ -56,14 +56,15 @@ export function Navigation() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className={`max-w-6xl mx-auto rounded-2xl transition-all duration-300 bg-black/[0.09] backdrop-blur-[16.5px] ${
-          scrolled ? 'shadow-lg shadow-blue-500/10' : ''
-        } border border-white/10`}
-      >
-        <div className="px-4 sm:px-6 lg:px-8">
+      <div className="section-shell section-shell--flush">
+        <motion.nav
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          className={`w-full rounded-2xl transition-all duration-300 bg-black/[0.09] backdrop-blur-[16.5px] ${
+            scrolled ? 'shadow-lg shadow-blue-500/10' : ''
+          } border border-white/10`}
+        >
+          <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -156,7 +157,8 @@ export function Navigation() {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.nav>
+        </motion.nav>
+      </div>
     </div>
   );
 }

@@ -36,8 +36,8 @@ export function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-12 sm:py-20 px-4" ref={ref}>
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-12 sm:py-20" ref={ref}>
+      <div className="section-shell">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
